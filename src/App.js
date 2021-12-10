@@ -50,8 +50,10 @@ function App() {
     <>
    <PokemonList pokemon={pokemon}/>
    <Pagination
-   gotoNextPage={gotoNextPage}
-   gotoPrevPage={gotoPrevPage}
+   //Permet de cacher les bouttons
+   // if nextPageUrl is true alors passe gotoNextPage sinon rien (nexPageUrl=false)
+   gotoNextPage={nextPageUrl ? gotoNextPage : null}
+   gotoPrevPage={prevPageUrl ? gotoPrevPage : null}
     />
     </>
   );
